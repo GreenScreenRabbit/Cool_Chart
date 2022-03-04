@@ -1,0 +1,146 @@
+.body {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+}
+
+.body-container {
+  position: relative;
+  height: 800px;
+}
+
+.body-inputsContainer {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: whitesmoke;
+}
+
+.inputRowContainer {
+  height: 200px;
+  background-color: #e6e4e4;
+}
+
+.inputsChart {
+  position: relative;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.inputsChart1 {
+  height: 10em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inputRowChart {
+  height: 90px;
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.price-body {
+  position: absolute;
+  top: 10%;
+  height: 10%;
+  background-color: whitesmoke;
+  width: 100%;
+  font-size: 36px;
+}
+
+.price-text {
+  position: relative;
+  height: 100%;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.stickContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: relative;
+  top: 20%;
+  height: 60%;
+  background-color: #dfdede;
+  width: 100%;
+}
+
+.stickContainer-stick {
+  position: relative;
+  -ms-flex-preferred-size: 0.1%;
+      flex-basis: 0.1%;
+  background-color: #6c6cff;
+}
+
+.stickContainer-first, .stickContainer-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.stickContainer-second {
+  z-index: 2;
+  background-color: none;
+}
+
+.replenishmentDropmenuOpen {
+  position: relative;
+}
+
+.replenishmentDropmenuOpen-dropItem {
+  position: relative;
+  z-index: 2;
+  height: 90px;
+  width: 100%;
+  background-color: white;
+  border: 1px solid;
+}
+
+.inputContainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.inputContainer-inputTitle {
+  position: relative;
+  bottom: -20%;
+}
+/*# sourceMappingURL=chart.css.map */
