@@ -105,8 +105,6 @@ const ChartPic = (props: PropsType) => {
                 const widthContainer = 480;
 
                 return widthContainer / +props.countYear;
-
-                // return widthContainer / +props.countYear;
             };
 
             const calculationTop = () => {
@@ -118,8 +116,7 @@ const ChartPic = (props: PropsType) => {
             };
 
             const newWidth = calculationWidth();
-            const newTop = calculationTop()
-
+            const newTop = calculationTop();
 
             console.log(`newWidth = ${newWidth}%`);
 
@@ -130,7 +127,6 @@ const ChartPic = (props: PropsType) => {
                     <div
                         className=""
                         style={{
-                            // top: 100 - (heightForProcentStick + heightForNonProcentStick) + "%",
                             top: newTop + "%",
                             height: "100%",
                             position: "relative",
@@ -180,7 +176,6 @@ const ChartPic = (props: PropsType) => {
                             }}
                             style={{
                                 flexBasis: "5%",
-                                // width: "5px",
                                 width: `${newWidth}px`,
                                 backgroundColor: "blue",
                                 height: heightForNonProcentStick + "%",
@@ -195,13 +190,18 @@ const ChartPic = (props: PropsType) => {
     };
 
     console.log(popUpRef.current?.getBoundingClientRect().left);
-    // createSticks(props.countYear, true);
     const stck = createSticks(moneyWithPercent, true);
 
     return (
         <div className="body-container">
+            <div className="price-body2">
+                {/* <div className="price-text" style={{fontSize:"26px"}}>Without percent = {maxCapitalAtMouth.toFixed(2)}</div> */}
+                <div className="price-text" style={{ fontSize: "26px" }}>
+                    Without percent = {Math.max(...moneyWithoutPercent).toFixed(2)}
+                </div>
+            </div>
             <div className="price-body">
-                <div className="price-text">PRICE</div>
+                <div className="price-text">With percent = {maxCapitalAtMouth.toFixed(2)}</div>
             </div>
             <div style={{ height: "100%", width: "100%", position: "relative" }}>
                 <Row style={{ height: "100%", width: "100%" }}>
